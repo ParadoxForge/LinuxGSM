@@ -10,10 +10,6 @@ local commandname="CHECK"
 # Every command that requires checks just references check.sh.
 # check.sh selects which checks to run by using arrays.
 
-if [ "${userinput}" != "install" ]&&[ "${userinput}" != "auto-install" ]&&[ "${userinput}" != "i" ]&&[ "${userinput}" != "ai" ]; then
-	check_root.sh
-fi
-
 check_tmuxception.sh
 
 if [ "${function_selfname}" != "command_install.sh" ]&&[ "${function_selfname}" != "command_update_functions.sh" ]&&[ "${function_selfname}" != "command_update_linuxgsm.sh" ]&&[ "${function_selfname}" != "command_details.sh" ]&&[ "${function_selfname}" != "command_postdetails.sh" ]; then
