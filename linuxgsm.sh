@@ -84,6 +84,7 @@ fn_bootstrap_fetch_file(){
 				echo -e "FAIL"
 				if [ -f "${lgsmlog}" ]; then
 					echo -e "${remote_fileurl}" | tee -a "${lgsmlog}"
+					echo -e "${local_filedir}/${local_filename}" | tee -a "${lgsmlog}"
 					echo -e "${curlcmd}" | tee -a "${lgsmlog}"
 				fi
 				exit 1
